@@ -1,0 +1,139 @@
+.about {
+  padding: 100px 30px;
+  background: linear-gradient(135deg, #1f1d1b, #2c2a28);
+  color: #fff;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.about-tille {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.about-tille h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff6f61, #ff9472);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1.5px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.about-tille img {
+  width: 100px;
+  opacity: 0.15;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-left img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-left img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7);
+}
+
+.about-right {
+  max-width: 720px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.about-para p {
+  font-size: 1.25rem;
+  line-height: 2;
+  color: #f5f5f5;
+  margin-bottom: 24px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 5px solid #ff6f61;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.about-para p:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-tille h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-tille img {
+    width: 70px;
+    top: 0;
+    right: 10px;
+  }
+
+  .about-left img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-para p {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}
